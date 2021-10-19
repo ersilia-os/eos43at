@@ -1,2 +1,2 @@
-# eos-template
-Template repository to add new models to the Ersilia Model Hub
+# eos43at
+Explainable AI applied to hERG blockade
