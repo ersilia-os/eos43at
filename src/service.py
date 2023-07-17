@@ -51,11 +51,10 @@ class Model(object):
         run_file = os.path.join(tmp_folder, self.RUN_FILE)
         with open(run_file, "w") as f:
             lines = [
-                "python {0}/predict.py {1} {2} {3}".format(
+                "python {0}/predict.py {1} {2}".format(
                     self.framework_dir,
                     data_file,
-                    pred_file,
-                    self.checkpoints_dir
+                    pred_file 
                 )
             ]
             f.write(os.linesep.join(lines))
