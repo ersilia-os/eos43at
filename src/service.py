@@ -70,7 +70,7 @@ class Model(object):
             for r in reader:
                 R += [{"pic50": float(r[0])}]
                 
-        result = {'result': R, 'meta': {"pic50": h[0]}}
+        result = {'result': R, 'meta': {"pic50": h}}
         shutil.rmtree(tmp_folder)
         return result
 
