@@ -68,12 +68,13 @@ class Model(object):
             h = next(reader)
             R = []
             for r in reader:
-                R += [{"pic50": float(r[0])}]
-                
-        result = {'result': R, 'meta': {"pic50": h}}
+                R += [
+                    {"outcome": [Float(x) for x in r]}
+                ]  # <-- EDIT: Modify according to type of output (Float, String...)
+        meta = {"outcome": h}
+        result = {"result": R, "meta": meta}
         shutil.rmtree(tmp_folder)
         return result
-
 
 class Artifact(BentoServiceArtifact):
     def __init__(self, name):
