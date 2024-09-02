@@ -16,10 +16,33 @@ import csv
 CHECKPOINTS_BASEDIR = "checkpoints"
 FRAMEWORK_BASEDIR = "framework"
 
+
 def load_model(framework_dir, checkpoints_dir):
     mdl = Model()
     mdl.load(framework_dir, checkpoints_dir)
     return mdl
+
+
+def Float(x):
+    try:
+        return float(x)
+    except:
+        return None
+
+
+def String(x):
+    x = str(x)
+    if not x:
+        return None
+    if x == "nan":
+        return None
+    if x == "null":
+        return None
+    if x == "False":
+        return None
+    if x == "None":
+        return None
+    return x
 
 
 class Model(object):
@@ -52,9 +75,7 @@ class Model(object):
         with open(run_file, "w") as f:
             lines = [
                 "bash {0}/run.sh {0} {1} {2}".format(
-                    self.framework_dir,
-                    data_file,
-                    output_file
+                    self.framework_dir, data_file, output_file
                 )
             ]
             f.write(os.linesep.join(lines))
@@ -75,6 +96,7 @@ class Model(object):
         result = {"result": R, "meta": meta}
         shutil.rmtree(tmp_folder)
         return result
+
 
 class Artifact(BentoServiceArtifact):
     def __init__(self, name):
