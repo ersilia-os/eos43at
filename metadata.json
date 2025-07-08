@@ -45,10 +45,10 @@
     "Docker Architecture": "AMD64",
     "Model Size": 6.0,
     "Environment Size": 2430.0,
-    "Image Size": 2358.84,
-    "Computational Performance 1": 34.5,
-    "Computational Performance 2": 24.85,
-    "Computational Performance 3": 30.34,
-    "Computational Performance 4": 187.7,
-    "Computational Performance 5": 844.8
+    "Image Size": 2358.92,
+    "Computational Performance 1": 27.82,
+    "Computational Performance 2": 17.61,
+    "Computational Performance 3": 19.41,
+    "Computational Performance 4": 167.3,
+    "Computational Performance 5": 771.39
 }
