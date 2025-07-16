@@ -5,7 +5,7 @@
     "Title": "Coloring molecules for hERG blockade",
     "Description": "By combining a Message-Passing Graph Neural Network (MPGNN) and a Forward fully connected Neural Network (FNN) with an integrated gradients explainable artificial intelligence (XAI) method, the authors developed MolGrad and tested it on a number of ADME predictive tasks. MolGrad incorporates explainable features to facilitate interpretation of the predictions.In this model, they train MolGrad with a dataset of hERG channel blockers/non-blockers to predict the cardiotoxicity of small molecules (IC50 in hERG blockade).",
     "Deployment": [
-        "Online"
+        "Local"
     ],
     "Source": "Local",
     "Source Type": "External",
