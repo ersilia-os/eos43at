@@ -44,7 +44,7 @@
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos43at",
     "Docker Architecture": "AMD64",
     "Model Size": 6.0,
-    "Environment Size": 2430.0,
+    "Environment Size": 2431.0,
     "Image Size": 2358.92,
     "Computational Performance 1": 27.82,
     "Computational Performance 2": 17.61,
