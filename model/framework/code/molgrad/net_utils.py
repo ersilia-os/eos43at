@@ -92,27 +92,31 @@ def mol_to_dgl(mol):
     g.set_n_initializer(dgl.init.zero_initializer)
     g.set_e_initializer(dgl.init.zero_initializer)
 
-    # Atom features
 
     atom_features = []
 
     pd = GetPeriodicTable()
-    # ComputeGasteigerCharges(mol)
 
     for atom in mol.GetAtoms():
         atom_feat = []
+
         atom_type = [0] * len(ATOM_TYPES)
-        atom_type[ATOM_TYPES.index(atom.GetSymbol())] = 1
+        sym = atom.GetSymbol()
+        if sym in ATOM_TYPES:
+            atom_type[ATOM_TYPES.index(sym)] = 1
 
         chiral = [0] * len(CHIRALITY)
-        chiral[CHIRALITY.index(atom.GetChiralTag())] = 1
+        tag = atom.GetChiralTag()
+        if tag in CHIRALITY:
+            chiral[CHIRALITY.index(tag)] = 1
+
+        hybrid = [0] * len(HYBRIDIZATION)
+        hyb = atom.GetHybridization()
+        if hyb in HYBRIDIZATION:
+            hybrid[HYBRIDIZATION.index(hyb)] = 1
 
         ex_valence = atom.GetExplicitValence()
         charge = atom.GetFormalCharge()
-
-        hybrid = [0] * len(HYBRIDIZATION)
-        hybrid[HYBRIDIZATION.index(atom.GetHybridization())] = 1
-
         degree = atom.GetDegree()
         valence = atom.GetImplicitValence()
         aromatic = int(atom.GetIsAromatic())
@@ -121,9 +125,14 @@ def mol_to_dgl(mol):
         rad = atom.GetNumRadicalElectrons()
         ring = int(atom.IsInRing())
 
-        mass = pd.GetAtomicWeight(atom.GetSymbol())
-        vdw = pd.GetRvdw(atom.GetSymbol())
-        # pcharge = float(atom.GetProp("_GasteigerCharge"))
+        try:
+            mass = pd.GetAtomicWeight(sym)
+        except Exception:
+            mass = 0.0
+        try:
+            vdw = pd.GetRvdw(sym)
+        except Exception:
+            vdw = 0.0
 
         atom_feat.extend(atom_type)
         atom_feat.extend(chiral)
@@ -139,8 +148,9 @@ def mol_to_dgl(mol):
         atom_feat.append(ring)
         atom_feat.append(mass)
         atom_feat.append(vdw)
-        # atom_feat.append(pcharge)
+
         atom_features.append(atom_feat)
+
 
     for bond in mol.GetBonds():
         g.add_edge(bond.GetBeginAtomIdx(), bond.GetEndAtomIdx())
