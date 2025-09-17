@@ -2,8 +2,7 @@
 
 By combining a Message-Passing Graph Neural Network (MPGNN) and a Forward fully connected Neural Network (FNN) with an integrated gradients explainable artificial intelligence (XAI) method, the authors developed MolGrad and tested it on a number of ADME predictive tasks. MolGrad incorporates explainable features to facilitate interpretation of the predictions.In this model, they train MolGrad with a dataset of hERG channel blockers/non-blockers to predict the cardiotoxicity of small molecules (IC50 in hERG blockade).
 
-This model was incorporated on 2021-10-19.
-
+This model was incorporated on 2021-10-19.Last packaged on 2025-09-17.
 
 ## Information
 ### Identifiers
@@ -42,12 +41,12 @@ Below are the **Output Columns** of the model:
 ### Resource Consumption
 - **Model Size (Mb):** `6`
 - **Environment Size (Mb):** `2431`
-- **Image Size (Mb):** `2358.92`
+- **Image Size (Mb):** `2375.96`
 
 **Computational Performance (seconds):**
-- 10 inputs: `27.82`
-- 100 inputs: `19.41`
-- 10000 inputs: `771.39`
+- 10 inputs: `28.37`
+- 100 inputs: `19.93`
+- 10000 inputs: `192.97`
 
 ### References
 - **Source Code**: [https://github.com/josejimenezluna/molgrad/](https://github.com/josejimenezluna/molgrad/)
