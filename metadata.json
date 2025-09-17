@@ -40,15 +40,17 @@
     "License": "AGPL-3.0-only",
     "Contributor": "miquelduranfrigola",
     "Incorporation Date": "2021-10-19",
+    "Last Packaging Date": "2025-09-17",
+    "Release": "v1.0.0",
     "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos43at.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos43at",
     "Docker Architecture": "AMD64",
     "Model Size": 6.0,
     "Environment Size": 2431.0,
-    "Image Size": 2358.92,
-    "Computational Performance 1": 27.82,
-    "Computational Performance 2": 17.61,
-    "Computational Performance 3": 19.41,
-    "Computational Performance 4": 167.3,
-    "Computational Performance 5": 771.39
+    "Image Size": 2375.96,
+    "Computational Performance 1": 28.37,
+    "Computational Performance 2": 18.21,
+    "Computational Performance 3": 19.93,
+    "Computational Performance 4": 51.56,
+    "Computational Performance 5": 192.97
 }
