@@ -43,7 +43,7 @@
     "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos43at.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos43at",
     "Docker Architecture": "AMD64",
-    "Model Size": 6.0,
+    "Model Size": 8.0,
     "Environment Size": 2431.0,
     "Image Size": 2358.92,
     "Computational Performance 1": 27.82,
