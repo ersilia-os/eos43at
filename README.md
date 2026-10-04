@@ -1,6 +1,6 @@
 # Coloring molecules for hERG blockade
 
-By combining a Message-Passing Graph Neural Network (MPGNN) and a Forward fully connected Neural Network (FNN) with an integrated gradients explainable artificial intelligence (XAI) method, the authors developed MolGrad and tested it on a number of ADME predictive tasks. MolGrad incorporates explainable features to facilitate interpretation of the predictions.In this model, they train MolGrad with a dataset of hERG channel blockers/non-blockers to predict the cardiotoxicity of small molecules (IC50 in hERG blockade).
+Estimates blockade of the hERG potassium channel, a liability associated with QT prolongation and arrhythmia, on the pIC50 scale. Jimenez-Luna and co-workers trained message-passing graph neural networks across four ADME and safety endpoints, coupling them with integrated-gradients attribution so individual atoms can be coloured by their contribution to a prediction. This endpoint draws on 6,993 compounds with reported nanomolar IC50 values. The colouring explains what the network learned; it does not by itself establish that the prediction is correct.
 
 This model was incorporated on 2021-10-19.Last packaged on 2025-09-17.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2021-10-19.Last packaged on 2025-09-17.
 ### Output
 - **Output Dimension:** `1`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** pIC50 of hERG inhibition
+- **Interpretation:** Predicted pIC50 for hERG channel blockade, where higher values indicate stronger inhibition.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
