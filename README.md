@@ -2,7 +2,8 @@
 
 Estimates blockade of the hERG potassium channel, a liability associated with QT prolongation and arrhythmia, on the pIC50 scale. Jimenez-Luna and co-workers trained message-passing graph neural networks across four ADME and safety endpoints, coupling them with integrated-gradients attribution so individual atoms can be coloured by their contribution to a prediction. This endpoint draws on 6,993 compounds with reported nanomolar IC50 values. The colouring explains what the network learned; it does not by itself establish that the prediction is correct.
 
-This model was incorporated on 2021-10-19.Last packaged on 2025-09-17.
+This model was incorporated on 2021-10-19.
+Last packaged on 2025-09-17.
 
 ## Information
 ### Identifiers
@@ -37,6 +38,7 @@ Below are the **Output Columns** of the model:
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos43at](https://hub.docker.com/r/ersiliaos/eos43at)
 - **Docker Architecture:** `AMD64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos43at.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos43at.zip)
+- **Apptainer**: [https://models-sif.s3.eu-north-1.amazonaws.com/eos43at_v1.sif](https://models-sif.s3.eu-north-1.amazonaws.com/eos43at_v1.sif)
 
 ### Resource Consumption
 - **Model Size (Mb):** `6`
